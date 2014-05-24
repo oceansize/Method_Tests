@@ -1,5 +1,3 @@
-require 'strings'
-
 describe 'Strings' do
 
   context 'APPEND:' do
