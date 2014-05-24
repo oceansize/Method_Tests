@@ -1,8 +1,5 @@
 require 'strings'
 
-# str << integer → str
-# str << obj → str
-# Append—Concatenates the given object to str. If the object is a Integer, it is considered as a codepoint, and is converted to a character before concatenation.
 describe 'Strings' do
 
   context 'APPEND:' do
@@ -17,11 +14,6 @@ describe 'Strings' do
     end
   end
 
-  # context 'CENTER:' do
-  #   it 'Centers a string within a specified character range & can add a repeating character' do
-  #     expect("STRINGS".center(' 60 ','-').to eq "Strings"
-  #   end
-  # end
   context 'CHAR:' do
     it 'Splits a string into an array of individual characters' do
       expect("Strings".chars).to eq ["S", "t", "r", "i", "n", "g", "s"]
@@ -52,106 +44,83 @@ describe 'Strings' do
     end
   end
 
-  context 'GSUB' do
+  context 'GSUB:' do
     it 'Substitutes character(s) specified' do
       expect("hello".gsub('l','r')).to eq 'herro'
     end
   end
 
-  context 'HASH' do
+  context 'HASH:' do
     it 'Converts a string into a randomly-generated number' do
       expect("hello".hash.class).to_not eq String
     end
   end
 
-  context 'EMPTY?' do
+  context 'EMPTY?:' do
     it 'Checks to see if a string is empty' do
       expect("hello".empty?).to be_false
     end
   end
 
-  context 'LENGTH?' do
+  context 'LENGTH?:' do
     it 'Counts the number of characters in a string' do
       expect("hello".length).to eq 5
     end
   end
 
-  context 'INCLUDE?' do
+  context 'INCLUDE?:' do
     it 'Checks to see if string contains the specified character(s)' do
       expect("hello".include?('l')).to be_true
     end
   end
 
-  context 'REVERSE' do
+  context 'REVERSE:' do
     it 'Reverses the order of characters in a string' do
       expect("hello".reverse).to eq "olleh"
     end
   end
 
-  context 'PREPEND' do
+  context 'PREPEND:' do
     it 'Attaches specified characters to the start of a string' do
       expect("hello".prepend('c')).to eq "chello"
     end
   end
 
-  context 'REPLACE' do
+  context 'REPLACE:' do
     it 'Replaces everything in a given string with supplied argument' do
       expect("hello".replace"goodbye").to eq "goodbye"
     end
   end
 
-  context 'SIZE' do
-    it 'Like "LENGTH", gives character count of a string, but will work with enumerators' do #http://batsov.com/articles/2014/02/17/the-elements-of-style-in-ruby-number-13-length-vs-size-vs-count/
+  context 'SIZE:' do
+    it 'Like "LENGTH", gives character count of a string, but will work with enumerators' do
+      # http://batsov.com/articles/2014/02/17/the-elements-of-style-in-ruby-number-13-length-vs-size-vs-count/
       expect("hello".size).to eq 5
     end
   end
 
-  context 'SLICE' do
+  context 'SLICE:' do
     it 'Retains a specified character or range from a string and discards everything else' do
       expect("why hello there sir".slice('hello')).to eq 'hello'
     end
   end
 
-  context 'SPLIT' do
+  context 'SPLIT:' do
     it 'Breaks up a string into an array based on the delimiter supplied (default is a single space character)' do
       expect("why hello there sir".split).to eq ["why", "hello", "there", "sir"]
     end
   end
 
-  context 'TO_I' do
+  context 'TO_I:' do
     it 'Converts a numerical string into an integer' do
       expect("1234".to_i).to eq 1234
     end
   end
 
-  context 'TO_SYM' do
+  context 'TO_SYM:' do
     it 'Converts a string into a symbol' do
       expect("golly".to_sym).to eq :golly
     end
   end
 
 end
-
-
-
-
-
-=begin
-capitalize → new_str
-Returns a copy of str with the first character converted to uppercase and the remainder to lowercase. Note: case conversion is effective only in ASCII region.
-
-
-  center(width, padstr=' ') → new_str
-Centers str in width. If width is greater than the length of str, returns a new String of length width with str centered and padded with padstr; otherwise, returns str.
-
-"hello".center(4)         #=> "hello"
-"hello".center(20)        #=> "       hello        "
-"hello".center(20, '123') #=> "1231231hello12312312"
-
-chars → an_array
-Returns an array of characters in str. This is a shorthand for str.each_char.to_a.
-
-If a block is given, which is a deprecated form, works the same as each_char.
-
-
-=end
