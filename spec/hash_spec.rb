@@ -14,7 +14,7 @@ describe 'Hash' do
         mash = {a: "a", b: "b"}
         mash.each{|element| puts "#{element}"}
       end
-      expect(hashing_each).to include :a => "z"
+      expect(hashing_each).to include :a => "a"
     end
   end
 

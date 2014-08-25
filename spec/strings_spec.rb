@@ -32,13 +32,13 @@ describe 'Strings' do
 
   context 'END_WITH?:' do
     it 'Checks whether string ends with specified character(s)' do
-      expect("my@email.com".end_with?('.com')).to be_true
+      expect("my@email.com".end_with?('.com')).to be true
     end
   end
 
   context 'START_WITH?:' do
     it 'Checks whether string starts with specified character(s)' do
-      expect("my@email.com".start_with?('my')).to be_true
+      expect("my@email.com".start_with?('my')).to be true
     end
   end
 
@@ -56,7 +56,7 @@ describe 'Strings' do
 
   context 'EMPTY?:' do
     it 'Checks to see if a string is empty' do
-      expect("hello".empty?).to be_false
+      expect("hello".empty?).to be false
     end
   end
 
@@ -68,7 +68,7 @@ describe 'Strings' do
 
   context 'INCLUDE?:' do
     it 'Checks to see if string contains the specified character(s)' do
-      expect("hello".include?('l')).to be_true
+      expect("hello".include?('l')).to be true
     end
   end
 

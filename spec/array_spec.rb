@@ -67,9 +67,9 @@ describe 'Array' do
   context 'EMPTY?:' do
     it 'Tests to see if an array is empty' do
       array = [1, 2, 3, 4, 5, 6]
-      expect(array.empty?).to be_false
+      expect(array.empty?).to be false
       array_2 = []
-      expect(array_2.empty?).to be_true
+      expect(array_2.empty?).to be true
     end
   end
 
@@ -90,8 +90,8 @@ describe 'Array' do
   context 'INCLUDE?:' do
       it 'Flattens a multidimensional array, to a single array' do
       array = ["cat","dog","human"]
-      expect(array.include?("dog")).to be_true
-      expect(array.include?("robot")).to be_false
+      expect(array.include?("dog")).to be true
+      expect(array.include?("robot")).to be false
     end
   end
 
@@ -226,7 +226,7 @@ describe 'Array' do
     it 'Returns true if all elements match given condition(s)' do
       array = [22,33,44,54,66]
       all = array.all? { |elem| elem % 11 == 0 }
-      expect(all).to be_false
+      expect(all).to be false
     end
   end
 
@@ -234,7 +234,7 @@ describe 'Array' do
     it 'Returns true if at least one element match given condition(s)' do
       array = [22,33,44,54,66]
       all = array.any? { |elem| elem % 11 == 0 }
-      expect(all).to be_true
+      expect(all).to be true
     end
   end
 
